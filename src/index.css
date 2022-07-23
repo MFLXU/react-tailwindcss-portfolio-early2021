@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+
+}
+:root {
+  --color-main: #4f46e5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  line-height: 120% !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f1f5f9;
+  
+}
+.font-poppins {
+  font-family: "Poppins";
+}
+#lt-1 {
+  opacity: 0;
+  animation: loadingText 0.5s 1.5s ease forwards;
+}
+#lt-2 {
+  opacity: 0;
+  animation: loadingText 0.5s 1.2s ease forwards;
+}
+#lt-3 {
+  opacity: 0;
+  animation: loadingText 0.5s 0.9s ease forwards;
+}
+#lt-4 {
+  opacity: 0;
+  animation: loadingText 0.5s 0.6s ease forwards;
+}
+
+#lt-5 {
+  opacity: 0;
+  animation: loadingText 0.5s 0.9s ease forwards;
+}
+#lt-6 {
+  opacity: 0;
+  animation: loadingText 0.5s 1.2s ease forwards;
+}
+#lt-7 {
+  opacity: 0;
+  animation: loadingText 0.5s 1.5s ease forwards;
+}
+.showUp {
+  animation: showUp 0.5s 3.75s ease forwards;
+}
+.loading {
+  animation: loading 0.5s 3s ease forwards;
+}
+
+#b-1 {
+  animation: loadingDot 1s ease forwards;
+}
+#b-2 {
+  animation: loadingDot 1s 1s ease forwards;
+}
+#b-3 {
+  animation: loadingDot 1s 2s ease forwards;
+}
+.side-sections{
+  position: fixed;
+  right: 2%;
+  top: 50%;
+}
+@layer base {
+  section {
+    @apply w-full h-fit py-6 px-4  bg-slate-100 dark:bg-zinc-900 dark:text-white;
+  }
+  .section__title {
+    @apply text-4xl text-indigo-600 font-bold mb-4;
+  }
+  .card {
+    @apply hover:shadow-xl duration-300 p-4 rounded-md flex justify-center items-center  overflow-hidden bg-white dark:bg-zinc-800 dark:border-zinc-700 dark:shadow-zinc-500;
+  }
+  input,
+  textarea, select {
+    @apply w-full  bg-inherit outline-none border-b pb-2
+  }
+  label {
+    @apply font-medium text-xl;
+  }
+  .header-bg {
+    @apply bg-slate-50 dark:bg-zinc-900 dark:shadow-zinc-600
+  }
+  .header{
+    @apply w-full  dark:text-white  z-[100]  fixed top-0  shadow-sm
+  }
+
+}
+@keyframes loadingText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes loading {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+    z-index: -100;
+  }
+}
